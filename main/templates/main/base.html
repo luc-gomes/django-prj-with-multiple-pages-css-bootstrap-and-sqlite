@@ -1,10 +1,16 @@
 <html>
 <head>
-    <title> site super legal</title>
+    <title> {% block title %}sitezão{% endblock%}</title>
 </head>
 
 <body>
-    <p> texto texto texto</p>
+    <div id= "content", name = "content"
+    <h1>Super sitezão</h1>
+    {% block content %}
+    <p>{{name}}</p>
+    
+    {% endblock %}
+    </div>
 </body>
 
 </html>
