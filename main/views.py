@@ -34,6 +34,7 @@ def home(response):
 
 
 def cadastro(response):
+    
     if response.method == "POST":
         form = CreateNewList(response.POST)
         
