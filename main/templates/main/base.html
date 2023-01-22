@@ -14,18 +14,20 @@
             left: 0;
             backgrond-color: #111;
             overflow-x: : hidden;
-            padding-top: 20px;     
+            padding-top: 20px;  
+            background: #CD853F;   
         }
     
         .sidenav a {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
-            font-size: 25px;
+            font-size: 35px;
             color: #818181;
             display: block;
+            
         }
     
-        .sidenave a:hover{
+        .sidenav a:hover{
             color: f1f1f1;
     
         }
@@ -35,7 +37,19 @@
             padding: 0px 10px;
     
         }
+        .imgbar {
+            background: #CD853F;
+            height: 50px;
+            width: 300px;
+            
+            
+        }
     
+        .h1 {
+            color: #003366;
+            padding: 5px;
+
+        }
     </style>
 
     <title> {% block title %}sitezão{% endblock%}</title>
@@ -44,15 +58,28 @@
 </head>
 
 <body>
-    <div class="sidenav">
-        <a href= "/home">Home</a>
-        <a href= "/create">create</a>
-        <a href= "/2">view</a>
-        <a href= "/register">add user</a>    
-        <p><a href= "/login"> Entrar<a/></p>
+    <nav class="navbar navbar-default navbar-static-top bg-dark"  background: #CD853F;>
+        <div class="imgbar">
+            <h1> Meu super site </h1>
+        </div>
+        <tr class="navbar-nav">
+        <td class="nav-item active">
+            <h2><a class="nav-link"href= "/home">Home</a>
+        </td>
+        <td class="nav-item">
+            <h2> <a href= "/create">create</a></h2>
+        </td>
+        <td class="nav-item">
+            <h2> <a href= "/2">view</a></h2>
+        </td>
+        <td class="nav-item">
+            <h2> <a href= "/register">registre-se</a>    </h2>
+        </td>
+        <td class="nav-item">
+           <h2> <a href= "/login"> Entrar<a/> </h2>
+            </td>
 
-
-    </div>
+        </nav>
     <div id= "content", name = "content", class= "main">
         <div class="row justify-content-md-center">
             <div class="col-8">
