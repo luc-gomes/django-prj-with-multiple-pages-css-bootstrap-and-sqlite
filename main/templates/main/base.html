@@ -5,51 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <style type= "text/css">
-        .sidenav {
-            height:100%;
-            widgh:160px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            backgrond-color: #111;
-            overflow-x: : hidden;
-            padding-top: 20px;  
-            background: #CD853F;   
-        }
-    
-        .sidenav a {
-            padding: 6px 8px 6px 16px;
+  
+        a:link, a:visited {
+            background-color: #f44336 ;opacity:0.6;
+            color: white;
+            padding: 4px 15px;
+            text-align: center;
             text-decoration: none;
-            font-size: 35px;
-            color: #818181;
-            display: block;
-            
+            display: inline-block;
+          }
+        .sidebar{
+            border-color
+            font-style: oblique;
+            background-color:	burlywood ;
+            border-left: 10px solid	darkred ;
+            border-radius: 5px 10px 20px 30px;
+
         }
-    
-        .sidenav a:hover{
-            color: f1f1f1;
-    
+
+        .sidebar hover{
+            opacity:1;
+            border-left: 10px solid	darksalmon;
+            color: white;
+
         }
     
         .main{
-            margin-left:160px;
-            padding: 0px 10px;
+            margin-left:50px;
+            padding: 0px 0px;
+          
     
         }
         .imgbar {
-            background: #CD853F;
+            font-style: oblique;
+            background: 	burlywood ;
             height: 50px;
             width: 300px;
+            border-left: 10px solid	darkred ;
+            border-radius: 5px 15px 70px 35px;
             
             
         }
     
-        .h1 {
-            color: #003366;
-            padding: 5px;
-
-        }
+       
     </style>
 
     <title> {% block title %}sitezão{% endblock%}</title>
@@ -62,26 +60,29 @@
         <div class="imgbar">
             <h1> Meu super site </h1>
         </div>
-        <tr class="navbar-nav">
+        
+        <tr class="navbar-nav"> <!-- lista de partes do site-->
         <td class="nav-item active">
-            <h2><a class="nav-link"href= "/home">Home</a>
+            <h2><a class="sidebar"href= "/home">Home</a>
         </td>
         <td class="nav-item">
-            <h2> <a href= "/create">create</a></h2>
+            <h2> <a class="sidebar" href= "/create">create</a></h2>
         </td>
         <td class="nav-item">
-            <h2> <a href= "/2">view</a></h2>
+            <h2> <a class="sidebar" href= "/2">view</a></h2>
         </td>
         <td class="nav-item">
-            <h2> <a href= "/register">registre-se</a>    </h2>
+            <h2> <a class="sidebar" href= "/register">registre-se</a>    </h2>
         </td>
         <td class="nav-item">
-           <h2> <a href= "/login"> Entrar<a/> </h2>
+           <h2> <a class="sidebar" href= "/login"> Entrar<a/> </h2>
             </td>
 
-        </nav>
+    </nav>
+   
+   
     <div id= "content", name = "content", class= "main">
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-sm-center">
             <div class="col-8">
                 <h1 class= "mt-2"> Meu super sitezão</h1>
                 <hr class = "mt-0 mb-4">
@@ -91,6 +92,14 @@
             </div>
         </div>
     </div>
+
+ 
+
+                
+            
+        
+
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
