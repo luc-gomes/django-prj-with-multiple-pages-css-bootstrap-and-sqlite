@@ -32,7 +32,6 @@ def index(response, id):
 def home(response):
     return render(response, "main/home.html", {"name": "test"})
 
-
 def cadastro(response):
     
     if response.method == "POST":
@@ -45,5 +44,19 @@ def cadastro(response):
 
             return HttpResponseRedirect("/%i" %t.id)
     else:
+        
         form = CreateNewList()
+    
     return render(response, "main/create.html", {"form": form })
+
+def subir (request):
+    if request.method == "GET":
+        return render (request, "main/upload.html")
+    elif request.method == "POST":
+        file = request.FILES
+
+        print(file)
+
+        return HttpResponse('teste')
+
+

@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+
+{% block title %} upload de arquivos {% endblock %}
+
+{% block content %}
+<h3> UPLOAD </h3>
+
+<form action = "{% url 'upload' %}" method = "POST" enctype = "multipart/form-data"> {% csrf_token %} 
+  
+    <input type = "file" name = "my_file">
+    <input type= "submit" value = "enviar" >
+ 
+</form>
+{% endblock %}
