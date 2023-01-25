@@ -59,4 +59,3 @@ def subir (request):
 
         return HttpResponse('teste')
 
-
