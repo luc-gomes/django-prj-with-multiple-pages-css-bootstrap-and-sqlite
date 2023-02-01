@@ -4,53 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <style type= "text/css">
-  
-       
-        .main{
-            margin-left:0px;
-            padding: 85px 0px;
-            background-color:#fff
-          
-    
-        }
-        .imgbar {
-            font-style: oblique;
-            background: 	burlywood ;
-            height: 50px;
-            width: 300px;
-            border-left: 10px solid	darkred ;
-            border-radius: 5px 15px 70px 35px;
-            
-            
-        }
-        a:link, a:visited {
-            color: white;
-            padding: 4px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-          }
-        .sidebar{
-            border-color
-            font-style: oblique;
-            background-color:	burlywood ;
-            border-left: 10px solid	darkred ;
-            border-radius: 5px 10px 20px 30px;
-    
-        }
-    
-        .sidebar hover{
-            opacity:1;
-            border-left: 10px solid	darksalmon;
-            color: white;
-    
-        }
-    
-       
-    </style>
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+   
     <title> {% block title %}sitezão{% endblock%}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
@@ -81,24 +36,24 @@
             
             </div>
         
-            <div class=" d-flex my-2 my-sm-0 " >
-                <span class="border border-2 border-secondary rounded">
+            <div class=" d-flex my-2 my-sm-0 " sytle = "border-left" >
+                <span class="border border-1 border-secondary rounded">
    
                 <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
-                    <button class="btn  btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control me-sm-3 my-1" type="text" placeholder="Search">
+                    <button class="btn  btn-secondary my-2 my-sm-1" type="submit">buscar</button>
                 </form>   
                 </span> 
 
-                <span class="border border-4 border-secondary rounded-pill">
+                <span class="border border-1  border-left border-secondary rounded">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="  nav-item">
-                    <a class="nav-link" href= "/register">registre-se</a>
+                    <a class="navbar-brand my-1" href= "/register">registre-se</a>
                 </li>
                 <li class="nav-item ">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href= "/login"> Entrar<a/> 
+                    <a class="navbar-brand my-1" href= "/login"> Entrar<a/> 
                 </li>
               </ul>
             </span>
