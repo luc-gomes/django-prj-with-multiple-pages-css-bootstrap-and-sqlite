@@ -7,33 +7,11 @@
     
     <style type= "text/css">
   
-        a:link, a:visited {
-            background-color: #f44336 ;opacity:0.6;
-            color: white;
-            padding: 4px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-          }
-        .sidebar{
-            border-color
-            font-style: oblique;
-            background-color:	burlywood ;
-            border-left: 10px solid	darkred ;
-            border-radius: 5px 10px 20px 30px;
-
-        }
-
-        .sidebar hover{
-            opacity:1;
-            border-left: 10px solid	darksalmon;
-            color: white;
-
-        }
-    
+       
         .main{
-            margin-left:50px;
-            padding: 0px 0px;
+            margin-left:0px;
+            padding: 85px 0px;
+            background-color:#fff
           
     
         }
@@ -47,6 +25,28 @@
             
             
         }
+        a:link, a:visited {
+            color: white;
+            padding: 4px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+          }
+        .sidebar{
+            border-color
+            font-style: oblique;
+            background-color:	burlywood ;
+            border-left: 10px solid	darkred ;
+            border-radius: 5px 10px 20px 30px;
+    
+        }
+    
+        .sidebar hover{
+            opacity:1;
+            border-left: 10px solid	darksalmon;
+            color: white;
+    
+        }
     
        
     </style>
@@ -57,41 +57,62 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-static-top bg-dark justify-content-around"  background: #CD853F;>
-        <div class="imgbar">
-            <h1> Meu super site </h1>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm  fixed-top">
+        
+          <a class="navbar-brand" href= "/home"><img src="{% static "/img/logo.svg" %}" width="150px" height="60px"/></a>
+          
+          <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation"></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="/home" aria-current="page">inicio <span class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/2" aria-current="page">Listar <span class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/create" aria-current="page">Add item <span class="visually-hidden">(current)</span></a>
+              </li>
+            </ul>
             
-        </div>
+            
+            <div class=" -flex my-2 my-sm-0 " >
+            
+            </div>
         
-        <tr class="navbar-nav"> <!-- lista de partes do site-->
-        
-        <td class="nav-item active">
-            <h2><a class="sidebar"href= "/home">inicio</a>
-        </td>
+            <div class=" d-flex my-2 my-sm-0 " >
+                <span class="border border-2 border-secondary rounded">
+   
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn  btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>   
+                </span> 
 
-         
+                <span class="border border-4 border-secondary rounded-pill">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="  nav-item">
+                    <a class="nav-link" href= "/register">registre-se</a>
+                </li>
+                <li class="nav-item ">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href= "/login"> Entrar<a/> 
+                </li>
+              </ul>
+            </span>
+            </div>
+          </div>
+         </nav>
+      
 
-        <td class="nav-item">
-            <h2> <a class="sidebar" href= "/create">cadastro</a></h2>
-        </td>
 
-        <td class="nav-item">
-            <h2> <a class="sidebar" href= "/2">itens</a></h2>
-        </td>
-
-        <td class="nav-item">
-            <h2> <a class="sidebar" href= "/register">registre-se</a>    </h2>
-        </td>
-
-        <td class="nav-item">
-           <h2> <a class="sidebar" href= "/login"> Entrar<a/> </h2>
-        </td>
-    </nav>
 
     <div id= "content", name = "content", class= "main">
         <div class="row justify-content-sm-center">
-            <div class="col-8">
-                <h1 class= "mt-2" style="text-align:center"> Meu super sitezão</h1>
+            <div class="col-10">
+                <h1 class= "mt-4" style="text-align:center"> Meu super sitezão</h1>
                 <hr class = "mt-0 mb-4">
                     {% block content %}
                     {% endblock %}
