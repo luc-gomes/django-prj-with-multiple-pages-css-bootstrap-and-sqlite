@@ -12,6 +12,7 @@ urlpatterns = [
     path("create/", views.cadastro, name = "cadastro"),#formulario de cadastro
     path("2/", views.cadastro, name = "list"),
     path("upload/", views.subir, name = "upload"),
+    path("portifolio/", views.portifolio, name = "portifolio"),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

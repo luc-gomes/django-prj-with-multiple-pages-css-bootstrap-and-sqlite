@@ -59,3 +59,6 @@ def subir (request):
 
         return HttpResponse('teste')
 
+def portifolio(response):
+    return render(response, "main/portifolio.html", {"name": "test"})
+
